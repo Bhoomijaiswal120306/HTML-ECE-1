@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 20px; 
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            height: 200px;
+            background-color: #eee; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .product-details {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            color: #b12704;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .grid-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Featured Products</h1>
+    </header>
+
+    <div class="grid-container">
+        
+        <div class="product-card">
+            <div class="product-image">
+                Product 1 Placeholder
+            </div>
+            <div class="product-details">
+                <img src="hoodie.avif" alt="product1" height="400px" width="50%">
+                <h2 class="product-title">Premium Hoodie</h2>
+                <p class="product-price">$65.00</p>
+                <p class="product-description">Heavyweight cotton blend, perfect for winter.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                Product 2 Placeholder
+            </div>
+            <div class="product-details">
+                <img src="jeans.avif" alt="product2" height="400px" width="50%">
+                <h2 class="product-title">Slim-Fit Jeans</h2>
+                <p class="product-price">$59.99</p>
+                <p class="product-description">Stretch denim with a modern, tailored fit.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                Product 3 Placeholder
+            </div>
+            <div class="product-details">
+                <img src="wallet.jpg" alt="product3" height="400px" width="50%">
+                <h2 class="product-title">Leather Wallet</h2>
+                <p class="product-price">$35.50</p>
+                <p class="product-description">Genuine leather, holds cards and cash securely.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                Product 4 Placeholder
+            </div>
+            <div class="product-details">
+                <img src="backpack.jpeg" alt="product4" height="400px" width="50%"
+                <h2 class="product-title">Canvas Backpack</h2>
+                <p class="product-price">$45.00</p>
+                <p class="product-description">Durable canvas, ideal for travel or school.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                Product 5 Placeholder
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Running Shoes</h2>
+                <p class="product-price">$99.99</p>
+                <p class="product-description">Lightweight design with excellent arch support.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                Product 6 Placeholder
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Basic T-Shirt (2-Pack)</h2>
+                <p class="product-price">$19.99</p>
+                <p class="product-description">Essential soft cotton t-shirts.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                Product 7 Placeholder
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Smartwatch</h2>
+                <p class="product-price">$199.00</p>
+                <p class="product-description">Track fitness, sleep, and notifications.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                Product 8 Placeholder
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Ceramic Mug Set</h2>
+                <p class="product-price">$22.50</p>
+                <p class="product-description">Set of four handcrafted mugs.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
